@@ -1,0 +1,221 @@
+/* 깃허브 느낌의 테마 컬러 */
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #238636;
+  --link: #2f81f7; 
+  --shadow: rgba(0,0,0,0.5);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: #010409;
+  color: var(--text);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+header h1 { margin: 0; }
+header p { margin-top: 0.5rem; }
+
+/* 클래스 셀렉터 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem 0 0.5rem 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.section-title--interests {
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+.profile-section {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-bio h2 { margin: 0 0 0.25rem 0; }
+.profile-actions { margin-top: 0.75rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn.primary, .btn.contact { 
+  background-color: var(--accent); 
+  color: #fff; 
+  box-shadow: 0 6px 16px var(--shadow); 
+}
+.btn.ghost { 
+  background-color: transparent; 
+  color: var(--text); 
+  border: 1px solid var(--border); 
+}
+.btn.primary, .btn.contact, .btn.ghost:hover {
+  cursor:pointer;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px var(--shadow);
+  width: 100%;
+  max-width: 500px;
+  margin:0 auto;
+}
+
+/* 아이디 셀렉터 */
+#contact h2 { margin: 0 0 0.3rem 0; }
+#contact form { gap: 0.45rem; }
+#contact .form-row.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+#contact .form-field label { margin-bottom: 0.15rem; }
+#contact form input, #contact form textarea { padding: 0.4rem 0.8rem; }
+#contact .form-actions { gap: 0.4rem; }
+#contact .btn { padding: 0.5rem 0.9rem; }
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+.feature-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.feature-item:hover { 
+  transform: scale(1.1);  
+  background-color: #238636;
+  color: white;  
+}
+.feature-emoji { font-size: 1.6rem; }
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+.grid-section .interest-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.grid-section .interest-item:hover { 
+  transform: scale(1.1);  
+  background-color: #238636;
+  color: white; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 50%;
+}
+
+.form-row.two-col { 
+  display: grid;
+  grid-template-columns:
+  repeat(2, minmax(0, 1fr));
+}
+
+.form-field label { 
+  display: block; 
+  margin-bottom: 0.2rem; 
+  font-weight: 600; 
+}
+
+form input, form textarea { 
+  padding: 0.45rem 0.5rem; 
+  border: 1px solid var(--border); 
+  border-radius: 6px; 
+  background: #0b1320; 
+  color: var(--text); 
+}
+
+.form-actions { 
+  display: flex; gap: 0.45rem; 
+}
+
+.error { 
+  color: #d12b2b; 
+  font-size: 0.85rem; min-height: 1em; 
+}
+
+.form-feedback { 
+  margin-top: 0.25rem; 
+  color: #0a7a3b; 
+  font-weight: 600; 
+}
+
+footer {
+  background: #010409;
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 600px) {
+  .profile-section { grid-template-columns: 1fr; text-align: center; }
+  .profile-img { margin: 0 auto 1rem auto; }
+  .form-row.two-col { grid-template-columns: 1fr; }
+  .grid-section { grid-template-columns: 1fr; }
+  .feature-section { grid-template-columns: 1fr; }
+}

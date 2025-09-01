@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하린의 소개 페이지</title>
+  <link rel="stylesheet" href="myProfile.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <h1>하린의 연락 페이지</h1>
+    <p>안녕하세요! 궁금한 점이 있으신가요?</p>
+  </header>
+
+  <!-- 메인 -->
+  <main class="container">
+
+    <!-- 폼 -->
+    <section id="contact" class="card">
+      <h2>연락하기</h2>
+      <form>
+        <div class="form-row two-col">
+          <div class="form-field">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름" required>
+          </div>
+          <div class="form-field">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" placeholder="내용을 입력하세요" rows="4" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn contact" type="submit">보내기</button>
+          <button class="btn ghost" type="reset">초기화</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <p>페이지 예시</p>
+  </footer>
+</body>
+</html>
