@@ -47,7 +47,7 @@ frontend-beginner/
     - git pull origin main (브랜치 최신 작업 상태 반영, 매번 작업을 할 때마다 입력해주세요!)
     - mkdir 본인이름
     - cd 본인이름
-    - mkdir week1
+    - mkdir week1(2주차인 경우 week2, 3주차인 경우 week3)
     - git checkout -b 본인이름_week1
 
     **작업 후**
