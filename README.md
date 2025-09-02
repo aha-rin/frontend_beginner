@@ -48,6 +48,7 @@ frontend-beginner/
     - mkdir 본인이름
     - cd 본인이름
     - mkdir week1(2주차인 경우 week2, 3주차인 경우 week3)
+    - cd week1
     - git checkout -b 본인이름_week1
 
     **작업 후**
