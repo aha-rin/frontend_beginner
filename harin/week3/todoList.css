@@ -1,0 +1,167 @@
+body {
+  background-color: #fffdbb;
+  font-family: 'Do Hyeon', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  color: #4c2c92;
+  padding: 20px;
+}
+
+.todo-app__header {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.todo-app__title {
+  font-size: 40px;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.todo-app__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.todo-app__phrase {
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.todo-app__input {
+  width: 60%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fff8dc;
+  border: 2px solid #c586ff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 #b47ce9;
+}
+
+.todo-app__filters {
+  width:60%;
+  display: flex;
+  justify-content: flex-end;
+  gap:10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-app__filter-btn {
+  background-color: #ffb347;
+  border: 2px solid #4c2c92;
+  color: #4c2c92;
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 #4c2c92;
+}
+
+.todo-app__filter-btn:hover {
+  background-color: #ffd700;
+  border-color: #ff69d2;
+  box-shadow: 2px 2px 0 #ff69f5;
+}
+
+.todo-app__filter-btn--active {
+  background-color: #ffd700;
+  border-color: #ff69d2;
+  box-shadow: 2px 2px 0 #ff69f5;
+}
+
+.todo-app__lists {
+  text-align: center;
+  padding: 0;
+  font-size:25px;
+}
+
+.todo-app__list {
+  width:60%;
+  margin: 50px auto 0;
+  list-style: none;
+  font-size:16px;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.todo-app__list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff8dc;
+  border: 2px dashed #d4a5ff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #d4a5ff;
+}
+
+.todo-app__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #fff8dc;
+  border: 2px dashed #d4a5ff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #d4a5ff;
+}
+
+.todo-checkboxes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-btn {
+  background-color: #ffb347;
+  border: 2px dashed #4c2c92;
+  color: #6a1b9a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #4c2c92;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ffd700;
+  border-color: #ff69d2;
+  box-shadow: 2px 2px 0 #ff69f5;
+}
+
+.todo-app__count {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #4c2c92;
+}
+
+@media (max-width: 560px) {
+  .app { margin: 20px 12px; padding: 16px; }
+  .controls { flex-direction: column; align-items: stretch; }
+  .btn--link { align-self: flex-end; }
+}
+
+/* 반짝이는 애니메이션 효과를 위한 키프레임 */
+@keyframes sparkle {
+  0%   { background-color: #fff176; } 
+  50%  { background-color: #f3aece; }
+  100% { background-color: #fff176; }
+}
+
+.input--sparkle {
+  animation: sparkle 2s steps(1) infinite;
+}
