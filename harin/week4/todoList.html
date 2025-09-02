@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하린의 투두리스트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./todoList.css">
+</head>
+<body>
+    <main class="todo-app" role="main">
+    
+    <header class="todo-app__header">
+        <h1 class="todo-app__title">오늘의 퀘스트</h1>
+        <form id="todo-form" class="todo-app__form" autocomplete="off">
+        <label for="todo-input" class="todo-app__phrase">* 어떤 퀘스트를 완료해볼까요? *</label>
+        <div class="todo-app__filters">
+            <button type="button" class="todo-app__filter-btn" data-filter="all">전체</button>
+            <button type="button" class="todo-app__filter-btn" data-filter="active">미완료</button>
+            <button type="button" class="todo-app__filter-btn" data-filter="completed">완료</button>
+        </div>
+        <input id="todo-input" class="todo-app__input" type="text" placeholder="Enter를 눌러 새로운 퀘스트 등록" />
+        </form>
+    </header>
+
+    <section class="todo-app__list-section">
+        <h3 class="todo-app__lists">퀘스트 목록</h3>
+        <!-- ol/ul 태그 사용은 본인의 아이디어에 따라 자유롭게... ul이 보다 적합하지 않을까 합니다 -->
+        <ul id="todo-list" class="todo-app__list"></ul>
+    </section>
+
+    <footer class="todo-app__footer">
+        <span id="todo-count" class="todo-app__count">오늘의 퀘스트 완료까지 앞으로 0개!</span>
+    </footer>
+    </main>
+
+    <!-- DOM 생성 후 script 실행 -->
+    <script src="./todoList.js" defer></script>
+</body>
+</html>
