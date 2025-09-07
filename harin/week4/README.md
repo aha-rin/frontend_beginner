@@ -20,10 +20,10 @@ https://github.com/user-attachments/assets/76cc9550-627f-4eb6-be1e-cbc6b2f1841f
 
 ## 🎨 구현 예시 아이디어
 
-- 초기 데이터를 제거하고 renderTodos()가 배열 매개변수를 받지 않음
+- 초기 데이터를 처음에 받아 렌더링하고 새로운 객체를 아래에 추가로 적재
 - form submit 이벤트에서 input이 비어있지 않으면 새로운 객체를 생성하여 추가
 - change 이벤트 리스너를 통한 완료 체크박스 활성화
-- click 이벤트 리스너, alert를 통한 삭제 기능 구현
+- click 이벤트 리스너, alert를 통한 경고-삭제 기능 구현
 
 ---
 
