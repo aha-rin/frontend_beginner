@@ -51,11 +51,10 @@
 - 본인 이름 폴더에서 우클릭-추가 옵션 표시-'open git bash here'
 
 **작업 전**
-- git checkout main
-- git pull origin main (브랜치 최신 작업 상태 반영, 매번 작업을 할 때마다 입력해주세요!)
-- mkdir week3
-- cd week3
-- git checkout -b 본인이름_week3
+- git fetch origin
+- git switch -c 본인이름/week4 origin/main
+- mkdir -p 본인이름/week4
+- cd 본인이름/week4
 
 **작업 후**
 
