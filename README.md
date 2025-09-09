@@ -41,15 +41,20 @@ frontend-beginner/
 
     **작업 전**
 
-    - https://github.com/aha-rin/frontend_beginner.git
+    # 저장소 최초 클론(클론 이후부터는 frontend_beginner 내부에서 git bash 열어주세요)
+    - git clone https://github.com/aha-rin/frontend_beginner.git
     - cd frontend_beginner
-    - git checkout main
-    - git pull origin main (브랜치 최신 작업 상태 반영, 매번 작업을 할 때마다 입력해주세요!)
-    - mkdir 본인이름
-    - cd 본인이름
-    - mkdir week1(2주차인 경우 week2, 3주차인 경우 week3)
-    - cd week1
-    - git checkout -b 본인이름_week1
+
+    # 원격 최신 상태 가져오기 (파일은 안 내려받음, 충돌 방지)
+    - git fetch origin
+
+    # 최신 main 기준으로 본인 브랜치 생성
+    - git switch -c 본인이름_week1 origin/main
+
+    # 주차별 폴더 만들기
+    - mkdir -p 본인이름/week1
+    - cd 본인이름/week1
+
 
     **작업 후**
 
