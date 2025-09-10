@@ -54,7 +54,7 @@
 
 **작업 전**
 - git fetch origin
-- git switch -c 본인이름/week4 origin/main
+- git switch -c 본인이름_week3 origin/main
 - mkdir -p 본인이름/week4
 - cd 본인이름/week4
 
