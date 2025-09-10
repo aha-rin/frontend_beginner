@@ -37,7 +37,9 @@ frontend-beginner/
 - 작업 완료 후 PR 생성
 - 리뷰 후 main 브랜치에 머지
 
-🛠️ 작업 흐름(git bash 명령어 포함)
+🛠️ 작업 흐름(git bash 명령어 포함)  
+**제가 여러분 전부 공동 작업자로 초대를 드려서 fork를 통해서 작업하지 않으셔도 됩니다.**  
+**clone하실 때 아래에 적혀 있는 주소 그대로 git bash에 따라쳐주시면 됩니다.**
 
     **작업 전**
 
@@ -52,10 +54,7 @@ frontend-beginner/
     - git switch -c 본인이름_week1 origin/main
 
     # 주차별 폴더 만들기
-    - mkdir -p 본인이름
-    - cd 본인이름
-    - mkdir -p week1
-    - cd week1
+    - mkdir -p 본인이름/week1
 
 
     **작업 후**
