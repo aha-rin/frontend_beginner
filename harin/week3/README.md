@@ -4,6 +4,8 @@
 이번 주차에는 실제로 많이 사용되는 기능 중 하나인 **할 일 목록(Todo list)**을 구현해보도록 합시다.  
 예쁘고 완벽한 결과물보다는, **배운 개념을 활용하는 것**에 초점을 두고 진행해주세요.
 
+<img width="1638" height="1304" alt="image" src="https://github.com/user-attachments/assets/480bfecb-7000-4e61-9451-490114c6f842" />
+
 ---
 
 ## 📌 과제 요구사항
