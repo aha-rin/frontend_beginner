@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/76cc9550-627f-4eb6-be1e-cbc6b2f1841f
 
 **작업 전**
 - git fetch origin
-- git switch -c 본인이름/week4 origin/main
+- git switch -c 본인이름_week4 origin/main
 - mkdir -p 본인이름/week4
 - cd 본인이름/week4
 
