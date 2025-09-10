@@ -52,8 +52,10 @@ frontend-beginner/
     - git switch -c 본인이름_week1 origin/main
 
     # 주차별 폴더 만들기
-    - mkdir -p 본인이름/week1
-    - cd 본인이름/week1
+    - mkdir -p 본인이름
+    - cd 본인이름
+    - mkdir -p week1
+    - cd week1
 
 
     **작업 후**
