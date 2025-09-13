@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(100, 100, 100);
+    background-color: rgb(231, 236, 245);
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(123, 164, 248);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+header h1 {
+    font-weight: 900;
+    margin: 0;
+}
+
+header p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(123, 164, 248);
+    padding: 0.3rem 0;    
+}
+
+/*클래스 선택자*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.profile-section,
+.schedule-section,
+.hobby-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgb(209, 222, 243);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.5);
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.profile-img,
+.school-img {
+    margin-top: 1rem;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.html-img {
+    margin-top: 1rem;
+    width: 270px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+.profile-collection,
+.schedule-collection,
+.hobby-collection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.schedule-action {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: rgb(35, 176, 106);
+    text-decoration: none;
+    color: white;
+    margin: 1.5rem;
+}
+
+.schedule-action:hover {
+    background-color: rgb(16, 150, 87);
+    transform: scale(1.05);
+}
+
+.profile-collection h2,
+.profile-collection p,
+.schedule-collection h2,
+.hobby-collection h2 {
+    margin: 0;
+}
+
+.contact, 
+.hobby-list {
+    margin: 0;
+    text-align: left;
+    padding-left: 1.2rem;
+}
+
+.contact a {
+    background-color: rgb(169, 189, 238);
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 0.1rem;
+    color: rgb(128,0,128);
+}
+
+.contact a:hover {
+    color: rgb(133, 31, 176);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .profile-section,
+    .schedule-section,
+    .hobby-section {
+        margin: 0 0 rem 0;
+        width: 100%;
+    }
+}
