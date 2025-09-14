@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Junyong's introduce page</title>
+        <meta charset="utf-8">
+        <h1>Junyong's page</h1>
+        <h5>안녕하세요! 만나서 반갑습니다.</h3>
+
+    </head>
+
+    <style>
+        :root{
+            --bg: #0d1117;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #238636;
+            --shadow: rgba(0,0,0,0.5);
+        }
+
+        body{
+            margin:0;
+            background-color: var(--bg);
+            color:var(--text);
+            line-height:1.6;
+        }
+        head{
+            background-color: var(--border);
+            color: var(--text);
+        }
+        h1,h5{
+            text-align: center;
+        }
+        a{
+            text-decoration-line: none;
+        }
+        .profile-section{
+            background-color: gray;
+        }
+        #sec1{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        #sec2{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+           flex: 1 1 500px;
+        }
+        div{
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .profile-section{
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            align-items: center;
+        }
+        .contact-link{
+            border-radius: 4px;
+            background-color: var(--accent);
+            color: #fff;
+            box-shadow: 0 6px 15px var(--shadow);
+        }
+        .profile-img{
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media(max-width:800px){
+            #sec1{
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+    <body>
+        <section class="profile-secion">
+            <div>
+                <img src="peng.jpg" class="profile-img">
+                <h2>준용</h2>
+                <p>TMI. 제가 제일 좋아하는 동물은 펭귄입니다😏 </p>
+                <a class="contact-link" href="file:///C:/Users/qowns/Desktop/html_%EC%9E%91%EC%97%85%ED%8C%8C%EC%9D%BC/frontend_beginner/junyong/week1/myContact.html" target="blank" >Contact</a>
+            </div>   
+        </section>
+
+        <h3>Information</h3>
+        <section class="info-section">
+            <div id="sec1">
+                <div>
+                    <h3>Email</h3>
+                    <p>wnsdyd9741@naver.com</p>
+                </div>
+
+                <div>
+                    <h3>Instagram</h3>
+                    <p>b._n0gard</p>
+                </div>
+
+                <div>
+                    <h3>Tel.</h3>
+                    <P>010-9269-9741</P>
+                </div>
+
+                <div>
+                    <h3>Kakao talk</h3>
+                    <P>yy0ng_2</P>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h3>My Hobby</h3>
+            <div id="sec2">
+                <div class="item">기타 연주하기</div>
+                <div class="item">여행 다니기</div>
+                <div class="item">좋아하는 음악 듣기</div>
+                <div class="item">축구 하기</div>
+            </div>
+        </section>
+
+    </body>
+</html>
