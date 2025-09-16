@@ -1,0 +1,97 @@
+/* media query */
+@media (max-width : 800px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+        min-height: auto;
+        gap: 20px;
+    }
+    .sidebar-box {
+        width: 45%;
+        margin: 16px 5px 0px;
+    }
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    .main-content {
+        width: 90%;
+        min-width: auto;
+    }
+
+    .content-box {
+        width: 95%;
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    /* contact button 반응형 */
+    .contact-btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.05em;
+        margin-top: 8px;
+    }
+
+    /* projects-list 반응형 */
+    .projects-list {
+        padding-left: 10px;
+        font-size: 0.98em;
+    }
+    .projects-list li {
+        margin-bottom: 6px;
+    }
+
+    /* box-row(프로젝트, 연락처 등) 세로 배치 */
+    .box-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box-item {
+        padding: 16px 4px;
+        font-size: 1em;
+    }
+
+    .skills-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .skill-item {
+        padding: 14px 4px;
+        margin: 0 2px 8px 2px;
+        font-size: 0.95rem;
+    }
+    .skill-item {
+        padding: 14px 4px;
+        margin: 0 2px;
+        font-size: 0.95rem;
+    }
+    .content-box {
+        width: 95%;
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    /* contact form 버튼 반응형 */
+    .contact-btn {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1.08em;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+}

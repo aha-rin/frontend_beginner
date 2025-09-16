@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>민서의 소개 페이지</title>
+    <link rel = "stylesheet" href = "./css/myProfile.css">
+    <link rel = "stylesheet" href = "./css/mediaQuery.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>민서의 소개 페이지</h1>
+    </header>
+
+    <main class = "main">
+        <div class = "main-content">
+            <div class = "content-box contact-content">
+                <h2>Contact Me</h2>
+                <form class = "contact-form">
+                    <div class = "contact-row">
+                        <div class = "contact-col">
+                            <label for = "name">이름</label>
+                            <input type = "text" id = "name" name = "name" class = "contact-input" placeholder = "홍길동" required>
+                        </div>
+
+                        <div class = "contact-col">
+                            <label for = "email">이메일</label>
+                            <input type = "email" id = "email" name = "email" class = "contact-input" placeholder = "example@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <label for = "message">메시지</label>
+                    <textarea id = "message" name = "message" class = "contact-input contact-message" rows = "6" placeholder = "메시지를 입력하세요" required></textarea>
+
+                    <button type = "submit" class = "contact-btn">보내기</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minseo Kim. All rights reserved.</p>
+    </footer>
+</body>
+</html>
