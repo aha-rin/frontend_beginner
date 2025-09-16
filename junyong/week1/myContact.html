@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Junyong's contact page</title>
+    <h1>Contact</h1>
+    <h5>안녕하세요! 궁금한 점이 있으신가요?</h3>
+</head>
+
+<style>
+    :root{
+            --bg: #0d1117;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #238636;
+            --shadow: rgba(0,0,0,0.5);
+        }
+
+        body{
+            margin:0;
+            background-color: var(--bg);
+            color:var(--text);
+            line-height:1.6;
+        }
+        head{
+            background-color: var(--border);
+            color: var(--text);
+        }
+        h1,h5{
+            text-align: center;
+        }
+    #sec1{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 2px;
+        width: 650px;
+    }
+    .form-field label { 
+        display: block; 
+        margin-bottom: 0.2rem; 
+        font-weight: 600;
+        margin: 10px;
+    }
+    form input, form textarea{
+        padding: 0.45rem 0.5rem; 
+        border: 1px solid var(--border); 
+        border-radius: 6px; 
+        background: #0b1320; 
+        color: var(--text);
+        margin: 10px;
+    }
+    .form-actions{
+        display: flex;
+        gap: 0.5rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 1rem;
+        border-radius: 10px;
+    }
+    div{
+         border: 2px solid black;
+         border-radius: 10px;
+         margin: 10px;
+    }
+    @media(max-width:650px){
+        div{
+            text-align: center;
+        }
+        .form-actions{
+            justify-content: center;
+        }
+
+    }
+
+
+</style>
+
+<body>
+    <main class="container">
+        <h2>연락하기</h2>
+        <section id="sec1">
+            <form>
+                <div>
+                    <div class="form-field">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" placeholder="이름" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                </div>
+                <div class="form-field">
+                    <label for="message">메시지</label>
+                    <textarea id="message" name="message" placeholder="내용을 입력하세요" rows="4" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">보내기</button>
+                    <button type="reset">초기화</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
