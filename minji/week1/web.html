@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자기소개 페이지</title>
+        <style>
+            .header{
+                font-size : 45px;
+                text-align: center;
+                border-bottom : 2px dashed black;
+                padding:20px;
+            }
+            .profile{
+                display:grid;
+                grid-template-columns: 300px 1fr;
+                gap:30px; /*사진과 글 간격*/
+                align-items:center; /*사진과 글 중간에*/
+                border:2px solid black;
+                border-radius: 30px;
+            }
+            .profile-img{
+                width:250px;
+                height: 250px;
+                border-right:1px solid black;
+            }
+            
+            .profile-info{
+                /* border:2px solid black;  */
+                font-size : 30px;
+                flex:1;
+            }
+
+            .grid{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                margin-top:50px; 
+                /* border:2px solid black; */
+            }
+            
+            .favorite{
+                border: 2px solid black;
+                font-size: 30px;
+                border-radius:30px;
+            }
+            .promise{
+                border: 2px solid black;
+                font-size:30px;
+                border-radius: 30px;
+            }
+           .hover-swap .hover {
+            display: none;
+            }
+
+            .hover-swap:hover .default {
+            display: none;
+            }
+
+            .hover-swap:hover .hover {
+            display: inline;
+            }
+            
+            .hearts {
+                border: 0; /*hr 선 없애기*/
+                text-align: center;
+                }
+            .hearts::before {  /*hearts요소 앞부분에 content 출력하라는 뜻*/
+                content: "❤︎ ❤︎ ❤︎ ❤︎ ❤︎";
+                font-size: 20px;
+                color: black;
+                }
+
+        
+            @media (max-width: 700px) {
+                /* 제목 글자 크기 줄이기 */
+                .header {
+                    font-size: 30px;
+                }
+
+                /* 프로필 글자 크기 줄이기 */
+                .profile-info {
+                    font-size: 24px;
+                }
+
+                /* 즐겨찾기, 다짐 글자 크기 줄이기 */
+                .favorite, .promise {
+                    font-size: 24px;
+                }
+
+                /* 하트 꾸밈선 변경 */
+                .hearts::before {
+                    content: "❤︎ ❤︎ ❤︎"; /* 하트 개수 줄임 */
+                    font-size: 16px;           /* 하트 크기 줄임 */
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1 class="header">자기소개 페이지 </h1>
+        <div class="profile">
+            <div class = "profile-img">
+                <img src="girl.jpg" width="100%" height="100%">
+            </div>
+            <div class="profile-info">
+                    이름 : 김민지 <br>
+                    학교 : 부경대학교 <br>
+                    학과 : 컴퓨터공학과 <br>
+                    <a href="mbti.html" width="300" height="120">MBTI:ISFP</a>
+            </div>
+        </div>
+        <hr class="hearts">
+        <div class="grid">
+            <div class ="favorite">
+                <좋아하는 것>
+                <ul>
+                    <li>누워 있기</li>
+                    <li>귀여운 것</li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=qjebIv8FYMI&list=RDqjebIv8FYMI&start_radio=1" class="hover-swap">
+                            <span class="default">음악</span>
+                            <span class="hover">재생</span>
+                         </a>
+                    </li>
+                </ul>
+            </div>
+            <div class = "promise" style="margin-left:10px;">
+                <다짐><br>
+                <input type ="checkbox" > 과제 미루지 않기 <br>
+                <input type ="checkbox" > 공부 열심히 하기 <br>
+                <input type ="checkbox" > 쉽게 포기하지 않기 <br>
+            </div>
+        </div>
+    </body>
+</html>
