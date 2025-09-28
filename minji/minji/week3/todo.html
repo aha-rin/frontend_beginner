@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To Do LIST</title>
+    <style>
+        h2{
+            text-align : center;
+            font-size : 40px;
+        }
+        #todo{
+            list-style-type : none;
+        }
+        .done{
+            text-decoration: line-through;
+            color:gray;
+        }
+        #all, #completed, #active{
+            font-size:20px;
+        }
+        
+        li{
+            font-size: 30px;
+            border: 1px dashed;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 10px;
+            display:flex;
+        }
+        #total{
+            border: 2px solid black;
+            border-radius: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id = "total">
+    <h2>To Do LIST</h2>
+    <div class = "button">
+        <input type = "button"  id = "all" value = "전체">
+        <input type = "button" id = "completed" value = "완료">
+        <input type = "button" id = "active" value = "미완료">
+    </div>  
+
+    <ul id="todo"></ul> 
+    <script src = "todo.js"></script>
+</div>
+</body>
+</html>
