@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JusticeJun's Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./todoList.css">
+</head>
+
+<body>
+    <!--헤더: 페이지 상단 제목 표시-->
+    <header class="todo-page__header" role="banner">
+        <h1 class="todo-page__title">나의 이번 주 도전과제</h1>
+    </header>
+    <!--메인: 페이지 핵심 컨텐츠 표시-->
+    <main class="todo-page" role="main">
+        <!--도전과제 입력 섹션-->
+        <section class="todo-page__form-section">
+            <form id="todo-form" class="todo-page__form" autocomplete="off">
+                <label for="todo-input" class="todo-page__phrase">매 주 도전과제를 만들어 성취하자!</label>
+                <div class="todo-page__filters">
+                    <button type="button" class="todo-page__filter-btn" data-filter="all">전체 도전과제</button>
+                    <button type="button" class="todo-page__filter-btn" data-filter="continuing">진행중인 도전과제</button>
+                    <button type="button" class="todo-page__filter-btn" data-filter="completed">완료한 도전과제</button>
+                </div>
+                <input id="todo-input" class="todo-page__input" type="text" placeholder="Enter키를 눌러 새로운 도전과제를 추가하세요!" />
+            </form>
+        </section>
+        <!--도전과제 출력 섹션-->
+        <section class="todo-page__list-section">
+            <h3 class="todo-page__lists">도전과제 목록</h3>
+            <img src="challenges-trophy.jpg" alt="트로피 이미지" class="todo-page__image">
+            <ul id="todo-list" class="todo-page__list" tabindex="-1"></ul>
+        </section>
+    </main>
+    <!--푸터: 페이지 하단 남은 도전과제 개수 표시-->
+    <footer class="todo-page__footer">
+        <span id="todo-count" class="todo-page__count">앞으로 남은 도전과제 <span id="todo-count-num"
+                class="todo-page__count-num">0</span>개!</span>
+    </footer>
+
+    <!-- DOM 생성 후 script 실행 -->
+    <script src="./todoList.js" defer></script>
+</body>
+
+</html>
