@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo List</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      text-align: center;
+      margin: 0;
+      padding: 30px;
+    }
+    h1 { color: #333; }
+    input[type="text"] {
+      padding: 8px;
+      width: 60%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 8px 14px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .add-btn { background: #007bff; color: white; }
+    .filter-btn { background: #eee; }
+    .filter-btn.active { background: #007bff; color: white; }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    li {
+      background: white;
+      padding: 10px;
+      margin-bottom: 6px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #ddd;
+    }
+    li.done span { text-decoration: line-through; color: gray; }
+    .del-btn {
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo List</h1>
+
+  <input id="todo-input" type="text" placeholder="할 일을 입력하세요" />
+  <button id="add-btn" class="add-btn">추가</button>
+
+  <div>
+    <button class="filter-btn active" data-filter="all">전체</button>
+    <button class="filter-btn" data-filter="active">미완료</button>
+    <button class="filter-btn" data-filter="completed">완료</button>
+  </div>
+
+  <ul id="todo-list"></ul>
+
+  <script src="script1.js"></script>
+</body>
+</html>
