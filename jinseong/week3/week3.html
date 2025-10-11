@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="utf-8">
+        <script src="script.js" defer> </script>
+        <title> To Do list</title>
+    </head>
+    <body>
+       <div class="todo">
+         <h1 class="todo__head"> To do list</h1>
+             <div class="todo__controls">
+            <input type="text" id="input" placeholder="할 일을 입력하세요" class="todo__input">
+            <button id="check" class="todo__button">확인</button>  
+            <button id="incomplete" class="todo__button">미완료</button>      
+            </div>
+            <ul id="list" class="todo__list"></ul> 
+        </div>
+
+    </body>
+    <style>
+        .todo__head{
+                    text-align: center;
+                    color: white;
+                    margin-bottom: 15px;
+                    margin-top: 1px;
+        }
+        .todo{
+                background-color: rgb(90, 90, 134);
+                color: white;
+                text-align: center;
+                min-height: 100vh;
+        
+        }
+        .todo__input {
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 200px;
+            box-sizing: border-box;
+            
+        }
+        .todo__list {
+             width: 300px;          
+             padding-left: 0;
+             margin: 34px auto 0 auto;
+            }
+        .todo-list__item {
+                        width: 250px;
+                        text-align: left;
+                        margin: 5px 0;
+                        list-style: none;
+                        background-color: rgb(76, 77, 97);
+                        padding: 10px;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+        }
+        .todo-list__checkbox:checked + .todo-list__text{
+            text-decoration: line-through;
+            color: lightgray;
+        }
+        
+        .todo__button {
+            padding: 8px 10px;       
+            font-size: 16px;         
+            border-radius: 5px;      
+            border: none;                
+            background-color: white;
+            color: rgb(4, 4, 31);   
+        }
+    </style>
+</html>

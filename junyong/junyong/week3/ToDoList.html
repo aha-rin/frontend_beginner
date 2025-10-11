@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>오늘의 퀘스트</title>
+  <style>
+    body {
+      background-color: #fff8dc;
+      font-family: "Pretendard", sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #444;
+    }
+
+    .todo-container {
+      width: 400px;
+      margin: 0 auto;
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .todo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e9e9ff;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    button {
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .done {
+      background-color: #b3e6b3;
+    }
+
+    .delete {
+      background-color: #ffb3b3;
+    }
+
+    .filter-btns button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>오늘의 퀘스트</h1>
+
+  <div class="filter-btns">
+    <button id="showAll">전체</button>
+    <button id="showDone">완료</button>
+    <button id="showTodo">미완료</button>
+  </div>
+
+  <div class="todo-container" id="todoList"></div>
+
+  <!-- JS 파일 연결 -->
+  <script src="script.js"></script>
+</body>
+</html>

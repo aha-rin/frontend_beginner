@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- 모바일 환경을 위한 설정?-->
+        <title>todo</title>
+        <link rel = "stylesheet" href = "todoList.css">
+    </head>
+    <body>
+        <main class = "todo" role = "main">
+
+            <header class = "todo__header">
+                <h1 class = "todo__title">Have to do</h1>
+                <div class = "todo__filter">
+                    <!--data-filter: HTML5의 커스텀 데이터 속성 즉, id를 남발하지 않고 의미 데이터만 쓰고싶을 때-->
+                    <button type = "button" class = "todo__filter-btn" data-filter="all">전체</button>
+                    <button type = "button" class = "todo__filter-btn" data-filter="completed">완료</button>
+                    <button type = "button" class = "todo__filter-btn" data-filter="notYet">미완료</button>
+                </div>
+                <form id = "todo-form" autocomplete="off">
+                    <input type = "text" class = "todo__input" id = "todo__input">
+                </form>
+            </header>
+            <div class = "todo__list">
+                <h3 class = "todo__list-title">Today</h3>
+                <ul class = "todo__list-element" id = "todo-list"></ul>
+            </div>
+            <footer class = "todo__footer">
+                <div class = "todo__notYet">Have to do!</div>
+            </footer>
+        </main>
+        <script src = "todoList.js" defer></script>
+    </body>
+</html>

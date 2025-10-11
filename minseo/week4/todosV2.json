@@ -1,0 +1,13 @@
+{
+    "todos": [
+        { "id": 1, "text": "GDGoC 3주차 강의", "completed": true },
+        { "id": 2, "text": "GDGoC 4주차 강의", "completed": false },
+        { "id": 3, "text": "GDGoC 3주차 과제", "completed": true },
+        { "id": 4, "text": "오픈소스소프트웨어 3주차 강의 실습", "completed": false },
+        { "id": 5, "text": "오픈소스소프트웨어 4주차 강의", "completed": false },
+        { "id": 6, "text": "정보보호론 4주차 강의", "completed": true },
+        { "id": 7, "text": "정보보호론 4주차 퀴즈", "completed": true },
+        { "id": 8, "text": "자료구조 4주차 강의", "completed": true },
+        { "id": 9, "text": "자료구조 PROG-ASSIGN #02", "completed": true }
+    ]
+}

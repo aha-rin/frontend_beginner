@@ -1,0 +1,223 @@
+:root {
+    --main-green: rgb(10, 127, 80);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;    /* 1rem = 16px */
+}
+
+body {
+    background-color: rgb(165, 242, 216);
+    font-family: "Bagel Fat One", sans-serif;
+    color: var(--main-green);
+}
+
+.todo-page__header {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1.25rem;
+}
+
+.todo-page__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: .25rem .25rem .25rem gray;
+    color: rgb(62, 69, 59);
+}
+
+.todo-page__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.todo-page__phrase {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: rgb(40, 163, 114);
+}
+
+.todo-page__image {
+    width: 15%;
+    margin: .25rem auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.todo-page__input {
+    width: 60%;
+    padding: .75rem;
+    font-size: .85rem;
+    background-color: rgb(219, 255, 239);
+    border: 2px solid var(--main-green);
+    border-radius: .25rem;
+
+}
+
+.todo-page__filters {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin: .5rem 0 1.25rem;
+}
+
+.todo-page__filter-btn {
+    font-family: "Bagel Fat One", sans-serif;
+    background-color: rgb(248, 232, 114);
+    border: 2px solid var(--main-green);
+    border-radius: .5rem;
+    color: var(--main-green);
+    padding: .5rem .75rem;
+    margin: .25rem;
+    cursor: pointer;
+    box-shadow: .25rem .25rem 0 var(--main-green);
+    transition: background-color .5s ease;
+}
+
+.todo-page__filter-btn:hover {
+    background-color: rgb(243, 210, 102);
+}
+
+.todo-page__list-section {
+    width: 50%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgb(251, 240, 158);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-page__lists {
+    font-size: 1.5rem;
+    margin: .5rem;
+    text-align: center;
+}
+
+.todo-page__list {
+    width: 70%;
+    list-style: none;
+    font-size: 1rem;
+    padding: 0;
+    margin: 3rem auto 0;
+}
+
+.todo-page__li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .75rem;
+    margin-bottom: .5rem;
+    border: 2px solid var(--main-green);
+    border-radius: .5rem;
+    background-color: rgb(255, 248, 193);
+    box-shadow: .25rem .25rem 0 var(--main-green);
+}
+
+.todo-page__text {
+    flex: 1;
+    margin-right: 2rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.todo-page__btnBox {
+    display: flex;
+    gap: .5rem;
+    flex-shrink: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .6;
+    color: var(--main-green);
+}
+
+.todo-page__complete-btn,
+.todo-page__delete-btn {
+    font-family: "Bagel Fat One", sans-serif;
+    background-color: rgb(236, 236, 214);
+    border: 2px solid var(--main-green);
+    color: var(--main-green);
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    font-size: .875rem;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: .25rem .25rem 0 var(--main-green);
+    transition: background-color .5s ease;
+}
+
+.todo-page__complete-btn--completed:hover {
+    background-color: rgb(243, 210, 102);
+}
+
+.todo-page__complete-btn--continuing:hover {
+    background-color: rgb(135, 206, 250);
+}
+
+.todo-page__delete-btn:hover {
+    background-color: rgb(252, 122, 122);
+}
+
+.todo-page__count {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(62, 69, 59);
+}
+
+.todo-page__count-num {
+  animation: sparkle 1.2s infinite ease-in-out;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+@keyframes sparkle {
+  0%   { color: var(--main-green); }
+  50%  { color: rgb(243, 210, 102); }
+  100% { color: var(--main-green); }
+}
+
+@media (max-width: 560px) {
+  .todo-page__list-section {
+    width: 90%;         
+    padding: 1rem;
+  }
+
+  .todo-page__input {
+    width: 90%;        
+    font-size: 1rem;    
+  }
+
+  .todo-page__filters {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .todo-page__filter-btn {
+    width: 100%;        
+    text-align: center;
+    margin: .25rem 0;
+  }
+
+  .todo-page__list {
+    width: 100%;        
+  }
+}
+
+.input--sparkle {
+    animation: sparkle 2s steps(1) infinite;
+}
