@@ -16,12 +16,17 @@ const pendingCountElement = document.getElementById("pendingCount");
 // JSON 파일에서 할 일 목록을 로드하는 함수
 // async & await 사용을 통한 json 데이터 로드
 async function loadTodos() {
+  try {
     const response = await fetch("todosV2.json");
+    if (!response.ok) throw new Error("파일을 불러올 수 없습니다");
+
     const data = await response.json();
-
     todos = data.todos;
-
     renderTodos();
+  } catch (err) {
+    console.error("에러 발생:", err);
+    alert("할 일 목록을 불러오는 데 실패했습니다.");
+  }
 }
 
 // 초기화 및 이벤트 리스너 설정
