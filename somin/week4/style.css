@@ -1,0 +1,107 @@
+h1{
+    font-size: 45px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: green;
+}
+h3{
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+
+#atag{
+        text-align: center;       
+        padding: 10px 0;          
+        margin-bottom: 20px;    
+}
+
+#atag ol {
+        list-style: none;        
+        padding: 0;               
+        margin: 0;                
+        display: flex;            
+        justify-content: center;  
+        gap: 20px;           
+    }
+
+#atag a {
+        color: green;             
+        text-decoration: none;    
+        font-weight: bold;        
+    }
+
+#inputElements {
+        display: grid;                    
+        grid-template-columns: 1fr 100px; 
+        gap: 10px;                        
+        padding: 20px;                    
+        margin: 0;                       
+        margin-left: 100px;            
+        margin-right: 100px;              
+    }
+
+
+ #inputBox {
+        padding: 10px;            
+        border: 1px solid white;   
+        margin: 0;              
+    }
+
+
+#addBtn {
+        padding: 10px;                      
+        border: 1px solid white;           
+        background-color: green;          
+        color: white;                     
+        margin: 0;                          
+        cursor: pointer;                    
+    }
+
+#todoList {
+        list-style: none;       
+        padding: 0;               
+        margin: 0;                
+        margin-left: 100px;       
+        margin-right: 100px;      
+    }
+
+li {
+        display: grid;                       
+        grid-template-columns: 80px 1fr 80px; 
+        gap: 10px;                            
+        padding: 15px;                        
+        border-bottom: 1px solid white;     
+        align-items: center;                  
+        background-color: white;            
+    }
+
+    
+li button {
+        padding: 8px;             
+        border: 1px solid white;   
+        cursor: pointer;         
+        font-size: 12px;          
+        background-color: white;  
+    }
+
+   
+li button:last-child {
+        background-color: #ff7675;     
+        color: white;                  
+        border: 1px solid #ff7675;     
+    }
+
+    
+span {
+        padding: 10px;         
+        border-radius: 5px;    
+    }
+
+    
+a {
+        color: #ff7675;
+        text-decoration: none;     
+    }
