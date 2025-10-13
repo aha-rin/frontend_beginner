@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TODO LIST web site</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>TODO LIST</h1>
+<h3>할 일을 추가하고 완성해보세요.</h3>
+<div id="atag">
+<ol>
+    <li><a href="total.html">전체</a></li>
+    <li><a href="yet.html">미완료</a></li>
+    <li><a href="finished.html">완료</a></li>
+</ol>
+</div>
+
+<div id="inputElements">
+    <input id="inputBox" type="text" placeholder="이곳에 할 일을 적어볼까요?" onkeydown="if(event.key === 'Enter') addTodo()">
+    <button id="addBtn" onclick="addTodo()">추가</button>
+</div>
+
+<ul id="todoList">
+</ul>
+
+<script src="java.js"></script>
+
+</body>
+</html>
