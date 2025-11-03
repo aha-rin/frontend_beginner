@@ -29,10 +29,11 @@
 ## 🎨 구현 예시 아이디어
 
 - `App.jsx`에서 전체 Todo List를 관리하고, 각 할 일을 컴포넌트로 분리
-- `TodoItem` 컴포넌트를 만들어 개별 할 일의 표시 및 상태 변경 처리
-- `form` 제출 시 `input` 값이 비어 있지 않으면 새로운 객체를 생성하여 상태에 추가
-- 삭제 버튼 클릭 시 해당 항목을 상태에서 제거
-- 체크박스 클릭 시 완료 상태를 토글
+- 기존의 코드를 JSX 코드로 변환
+- css의 경우 그대로 App.css에 복붙하시면 됩니다.
+- index.css의 body 아래에 있는 display: flex, place-items:center를 지우셔야 이전에 Vanilla JS로 구현하셨던 것과 같은 웹 페이지 배열이 나올 겁니다.
+![alt text](image-2.png)
+- styled-components, Tainwind CSS, css 외부 파일 등 다양한 방법으로 css를 작성하셔도 좋습니다.
 
 ---
 
