@@ -23,12 +23,12 @@ function finish_yet_Handler(button, index) {
     if (finish[index] === false) {
         target.style.backgroundColor = 'powderblue';
         target.style.color = 'white';
-        button.innerHTML = 'finished.html';
+        button.innerHTML = '완료';
         finish[index] = true;
     } else {
         target.style.backgroundColor = '#e7d0ff';
         target.style.color = 'black';
-        button.innerHTML = 'yet.html';
+        button.innerHTML = '미완료';
         finish[index] = false;
     }
 }
@@ -43,9 +43,9 @@ function drawlists() {
 
         if (currentPage.includes('total.html')) {
             shouldShow = true;
-        } else if (currentPage.includes('미완료test.html')) {
+        } else if (currentPage.includes('yet.html')) {
             shouldShow = (finish[i] === false);
-        } else if (currentPage.includes('완료.html')) {
+        } else if (currentPage.includes('finished.html')) {
             shouldShow = (finish[i] === true);
         }
 
