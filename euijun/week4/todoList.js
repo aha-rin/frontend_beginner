@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     const text = input.value.trim();
     if (text != "") {
-        todos.push({ id: Date.now(), text: text, completed: false });
+        todos.push({ number: Date.now(), text: text, completed: false });
         input.value = "";
         renderList();
         const newLi = list.lastChild;
