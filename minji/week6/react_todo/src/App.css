@@ -1,0 +1,37 @@
+h2{
+            text-align : center;
+            font-size : 40px;
+        }
+        #todo{
+            list-style-type : none;
+        }
+        .done{
+            text-decoration: line-through;
+            color:gray;
+        }
+        #all, #completed, #active{
+            font-size:20px;
+        }
+        
+        li{
+            font-size: 30px;
+            border: 1px dashed;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 10px;
+            display:flex;
+        }
+        #total{
+            border: 2px solid black;
+            border-radius: 100px;
+            padding: 20px;
+        }
+        #new-todo{
+            font-size : 30px;
+        }
+        #addbutton{
+            font-size: 25px;
+        }
+        li button{
+            font-size: 15px;
+        }
