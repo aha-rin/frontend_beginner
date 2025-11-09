@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "ko">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel = "stylesheet" href = "todoListV2.css">
+</head>
+
+<body>
+    <div class = "container">
+        <h1>📝 Todo List</h1>
+
+        <!-- 할 일 추가 입력창 -->
+        <div class="add-todo-box">
+            <input type = "text" id = "newTodoInput" placeholder = "할 일을 입력하세요">
+            <button id = "addTodoBtn">추가</button>
+        </div>
+
+        <!-- 필터 버튼 -->
+        <div class = "filter-buttons">
+            <button class = "filter-btn active" data-filter = "all">전체</button>
+            <button class = "filter-btn" data-filter = "pending">미완료</button>
+            <button class = "filter-btn" data-filter = "completed">완료</button>
+        </div>
+
+        <!-- Todo 목록 컨테이너 -->
+        <div id = "todoList" class = "todo-list">
+            <!-- JavaScript로 동적 생성될 영역 -->
+        </div>
+
+        <!-- 상태 정보 -->
+        <div class = "status-info">
+            <span id = "totalCount">전체: 0개</span>
+            <span id = "completedCount">완료: 0개</span>
+            <span id = "pendingCount">미완료: 0개</span>
+        </div>
+    </div>
+
+    <script src = "todoListV2.js"></script>
+</body>
+
+</html>
