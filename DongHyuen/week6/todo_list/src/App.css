@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background-color: #424563;
+    color: #f7efff;
+    font-family: 'Do Hyeon', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    padding: 20px;
+}
+
+.todo{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+.todo__header {
+    text-align: center;
+    margin: 24px 0 16px;
+}
+
+.todo__title {
+    margin: 0 0 12px;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.todo__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.todo__filter-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 2px solid #7b8aad;
+    border-radius: 8px;
+}
+
+.todo__input {
+    width: 100%;
+    max-width: 560px;
+    margin: 0;
+    display: block;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 2px solid #7b8aad;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.todo__list{
+    margin-top: 12px;
+}
+
+.todo__list-title{
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #f7efff;
+    text-align: center;
+}
+
+.todo__list-element {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border: 2px solid #7b8aad;
+    border-radius: 10px;
+    background-color: #fff8dc;
+    color: black;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.todo__footer {
+    margin-top: 28px;
+    text-align: center;
+    color: #f7efff;
+}
+
+.todo__notYet {
+    font-size: 18px;
+}
+
+@media (max-width: 420px){
+    .todo{padding: 16px 12px 36px;}
+    .todo__title {font-size: 24px;}
+}
+
+.todo__checkbox{
+    width: 18px;
+    height: 18px;
+}
+
+.todo-checkboxes{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.todo__delete-button{
+    padding: 6px 10px;
+    font-size: 12px;
+    background-color: #ffffff;
+    border: 2px solid #7b8aad;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 입력창+추가 버튼 줄 배치 */
+.todo__controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+/* 필터 활성화 표시 */
+.todo__filter-btn--active{
+  background-color: #e8f0ff;
+  border-color: #4b66d6;
+  font-weight: 700;
+}
+
+/* 스크린리더 전용 숨김(접근성) */
+.todo__sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
