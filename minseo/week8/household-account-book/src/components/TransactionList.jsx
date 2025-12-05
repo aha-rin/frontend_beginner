@@ -9,21 +9,37 @@ export default function TransactionList() {
 	// Context에서 거래 내역 배열 가져오기
 	const { transactions } = useContext(AccountBookContext);
 
-	return (
-		<ul>
-			{transactions.length === 0 ? (
-				<li>내역이 없습니다.</li>
-			) : (
-				transactions.map((t, i) => (
-					<li
-						key = {i}
-						style = {{ color: t.amount < 0 ? "red" : "blue" }}
-					>
+	// 총액 계산
+	const total = transactions.reduce((sum, t) => sum + t.amount, 0);
 
-						{t.text}: {t.amount}원
-					</li>
-				))
-			)}
-		</ul>
+	return (
+		<div>
+			<div
+				style={{
+					fontWeight: "bold",
+					fontSize: "1.15rem",
+					marginBottom: "12px",
+					color:
+						total === 0 ? "#222" : total > 0 ? "#38a169" : "#e53e3e",
+				}}
+			>
+				총액: {total}원
+			</div>
+
+			<ul>
+				{transactions.length === 0 ? (
+					<li className="empty">내역이 없습니다.</li>
+				) : (
+					transactions.map((t, i) => (
+						<li
+							key={i}
+							className={t.amount < 0 ? "expense" : "income"}
+						>
+							{t.text}: {t.amount < 0 ? `-${Math.abs(t.amount)}` : t.amount}원
+						</li>
+					))
+				)}
+			</ul>
+		</div>
 	);
 }

@@ -29,16 +29,19 @@ export default function TransactionForm() {
 	return (
 		<form onSubmit = {handleSubmit}>
 			<input
+				type = "text"
 				value = {text}
 				onChange = {e => setText(e.target.value)}
 				placeholder = "내용"
+				required
 			/>
 
 			<input
+				type = "number"
 				value = {amount}
 				onChange = {e => setAmount(e.target.value)}
 				placeholder = "금액"
-				type = "number"
+				required
 			/>
 
 			<button type = "submit">추가</button>
