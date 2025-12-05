@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { AccountBookProvider } from "./context/AccountBookContext";
 import InputPage from "./pages/InputPage";
 import ListPage from "./pages/ListPage";
+import "./App.css";
 
 function App() {
   return (
