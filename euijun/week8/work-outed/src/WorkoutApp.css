@@ -1,0 +1,282 @@
+:root{
+  --bg: #fbfcfe;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --danger: #d64545;
+  --danger-soft: #ffecec;
+  --border: #e6e9ee;
+  --shadow: 0 6px 18px rgba(13,38,59,0.06);
+  --text: #081026;
+  --subtext: #5b6b73;
+}
+
+/* reset / base */
+*{ box-sizing:border-box; }
+html,body,#root{ height:100%; }
+body{
+  margin:0;
+  font-family: Inter, "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:12px 18px;
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow: var(--shadow);
+}
+.brand{
+  font-weight:900;
+  font-size:1.05rem;
+}
+.brand-link{
+  font-weight:900;
+  color: var(--text);
+  text-decoration:none;
+  font-size:1.05rem;
+}
+.nav-links{ display:flex; gap:10px; margin-left:8px; }
+.nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:700;
+}
+.nav a:hover{
+  background: rgba(214,69,69,0.08);
+  color:var(--danger);
+}
+
+/* PAGE / CARD */
+.page{
+  max-width:1100px;
+  margin:20px auto;
+  padding:20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.99));
+  border-radius:12px;
+  box-shadow: var(--shadow);
+  border:1px solid var(--border);
+}
+.card{
+  background:var(--card);
+  padding:14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  box-shadow: 0 6px 14px rgba(6,10,15,0.03);
+}
+.help{
+  color:var(--muted);
+  font-size:0.92rem;
+  margin-top:6px;
+}
+.help-small{
+  color:var(--muted);
+  font-size:0.88rem;
+}
+strong{ font-weight:800; }
+
+/* Home goals list */
+.home-goals{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.goal-card{
+  min-width:160px;
+  max-width:220px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background: linear-gradient(180deg,#fff,#fafafa);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.add-card input{
+  width:100%;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid var(--border);
+}
+
+/* buttons */
+button{
+  cursor:pointer;
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--primary);
+  color:#fff;
+  font-weight:700;
+}
+button.secondary{
+  background:transparent;
+  border:1px solid rgba(37,99,235,0.12);
+  color:var(--primary);
+}
+.del-btn{
+  background:transparent;
+  color:var(--danger);
+  border:none;
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+}
+
+/* chips (exercise tags) */
+.tag-row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+.chip{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#fff;
+  cursor:pointer;
+  font-weight:800;
+  color:#2b2530;
+}
+.chip--active{
+  background: var(--danger-soft);
+  border-color:#ffbaba;
+  color:#5a1b1b;
+}
+
+/* Today page */
+input[type="range"]{
+  width:100%;
+}
+.row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* list in card (Today 기록, Stats 상세) */
+.card ul{
+  padding-left:18px;
+  margin:8px 0 0 0;
+}
+.card li{
+  margin-bottom:6px;
+}
+
+/* Calendar grid (Stats) */
+.calendar-grid{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap:10px;
+  margin-top:12px;
+}
+.wk{
+  font-weight:800;
+  color:var(--muted);
+  font-size:0.85rem;
+  text-align:center;
+}
+.cell{
+  background:#fff;
+  border-radius:10px;
+  padding:10px;
+  border:1px solid var(--border);
+  min-height:72px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:flex-start;
+  justify-content:flex-start;
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+.cell.empty{
+  background:transparent;
+  border:0;
+  min-height:36px;
+}
+.cell-day{
+  font-size:0.85rem;
+  color:var(--text);
+  font-weight:800;
+}
+.cell--active{
+  background: #fff5f5;
+  border-color: #ffd4d4;
+}
+.parts{
+  margin-top:6px;
+  font-size:12px;
+  color:#5b2b2b;
+  min-height:18px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:100%;
+}
+
+/* Stats: 이번 주 통계 카드 리스트 */
+.status-list{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:12px;
+}
+
+/* goal-card 재사용 + 완료 상태 */
+.goal-card.done{
+  background: linear-gradient(180deg, #f3fffa, #e9fff5);
+  border-color: rgba(18,183,106,0.12);
+}
+
+/* 진행도 바 */
+.progress-track{
+  height:10px;
+  background:var(--danger-soft);
+  border-radius:6px;
+  overflow:hidden;
+}
+.progress-fill{
+  height:100%;
+  background:var(--danger);
+  border-radius:6px 0 0 6px;
+  transition: width .25s ease;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .calendar-grid{
+    gap:8px;
+  }
+  .cell{ min-height:64px; }
+}
+@media (max-width:520px){
+  .page{
+    padding:12px;
+    margin:8px;
+  }
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap:6px;
+  }
+  .cell{
+    min-height:56px;
+    padding:8px;
+  }
+  .goal-card{
+    min-width:100%;
+  }
+}
