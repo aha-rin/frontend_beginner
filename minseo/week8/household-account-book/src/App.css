@@ -1,0 +1,180 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* App 전체 레이아웃 및 폼, 리스트 스타일 추가 */
+body {
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+}
+
+.app-container {
+  max-width: 480px;
+  margin: 56px auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(49,130,206,0.10);
+  padding: 48px 32px;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-container:hover {
+  box-shadow: 0 12px 40px rgba(49,130,206,0.18);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 36px;
+  background: #3182ce;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(49,130,206,0.10);
+  overflow: hidden;
+  height: 54px;
+}
+nav a {
+  flex: 1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover {
+  background: #2563eb;
+  color: #e0eafc;
+}
+
+h2 {
+  margin-top: 0;
+  color: #2563eb;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 12px;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #b6c2d9;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  background: #f6f8fa;
+  color: #222; /* 입력값 텍스트를 검은색으로 */
+  box-shadow: 0 1px 4px rgba(49,130,206,0.04);
+}
+input::placeholder, select {
+  color: #888;
+}
+
+button {
+  background: linear-gradient(90deg, #3182ce 60%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1.08rem;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(49,130,206,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, #2563eb 60%, #3182ce 100%);
+  box-shadow: 0 4px 16px rgba(49,130,206,0.18);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.13rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: background 0.2s;
+  color: #222;
+}
+li:last-child {
+  border-bottom: none;
+}
+li.income {
+  color: #38a169;
+  font-weight: 600;
+}
+li.expense {
+  color: #e53e3e;
+  font-weight: 600;
+}
+li:hover {
+  background: #f6f8fa;
+}
+li.empty {
+  color: #222;
+  text-align: center;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
